@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69275d553b.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/addproduct.css">
+    <link rel="icon" href="/original.png">
+    <title>Rego | Add Product</title>
+</head>
+
+<body>
+    <header>
+        <img src="/REGO.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="btn-header">
+            <a href="" class="search"><i class="fas fa-search"></i></a>
+            <a href="/sellerprofile" class="cta"><button class="profile">Profile</button></a>
+            <a href=""><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="add-product">
+            <h1>Fill in Product Details</h1>
+            <form action="/auth/addproduct" method="POST" class="remove-content-1">
+                <div class="product-name">
+                    <span>Product Name</span>
+                    <input type="text" name="productname" id="productname" placeholder="Enter Name of Product"
+                        class="input-detail">
+                </div>
+                <div class="product-price">
+                    <span>Product Price</span>
+                    <input type="text" name="price" id="price" placeholder="Enter Price of Product"
+                        class="input-detail">
+                </div>
+                <div class="product-img">
+                    <span>Picture Link</span>
+                    <input type="text" name="imglink" id="imglink" placeholder="Product Picture Link (if available)"
+                        class="input-detail">
+                </div>
+                <div class="product-img">
+                    <span>Description</span>
+                    <input type="text" name="description" id="description" placeholder="Product Description"
+                        class="input-detail">
+                </div>
+                <div class="product-img">
+                    <span>Available Stocks</span>
+                    <input type="text" name="stock" id="stock" placeholder="Product Stock"
+                        class="input-detail">
+                </div>
+                <p align="center">{{seller.id}}</p>
+                <div class="product-id">
+                    <span>ID seller</span>
+                    <input type="text" placeholder="Enter Your ID" name="sellerid" id="sellerid" class="input-detail">
+                </div>
+                <div class="btn">
+                    <a href=""><button class="btn-submit">Submit</button></a><br>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

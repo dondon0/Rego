@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69275d553b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/checkout_page.css">
+    <link rel="icon" href="/original.png">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img src="/REGO.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="btn-header">
+            <a href="" class="search"><i class="fas fa-search"></i></a>
+            <a href="/sellerprofile" class="cta"><button class="profile">Profile</button></a>
+            <a href=""><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="sec-wrapper">
+            <h1>Your Cart</h1>
+            <div class="line"></div>
+            <div class="line-2"></div>
+            <div class="box-cart">
+                <ul class="column-cart">
+                    <li class="item-product">Product</li>
+                    <li class="item-quantity">Quantity</li>
+                    <li class="item-stock">Stock</li>
+                    <li class="item-subtotal">Subtotal</li>
+                </ul>
+                <div class="line-3"></div>
+                <div class="list">
+                    {{#each cart.products}}
+                    
+                    
+                    <div class="product-list">
+                        <div class="img-cart">
+                            <img src="{{imglink}}" alt="" width="180px" height="180px">
+                        </div>
+                        <div class="product-detail">
+                            <h3>{{productname}}</h3>
+                            <p>Price: Rp. {{price}}</p>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        {{qty}}
+                    </div>
+                    <div class="stock-product">
+                        <div>{{nowamt}}</div>
+                    </div>
+                    <div class="product-price">
+                        {{subtotal}}
+                    </div>
+                </div>
+                {{/each}}
+    
+                <div class="line-4"></div>
+                <div class="courier-id">
+                    <div class="delivery-id">
+                        <div class="subtotal"  >Delivery</div>
+                        <form action="/auth/payment" method="POST">
+                        <select name="courier" id="courierr" onchange="courierOption()" class="courier-option">
+                            {{#each courier}}
+                            <option value="{{name}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                        
+                    </div>
+                    <div class="line-5">
+                        <hr>
+                    </div>
+                </div>
+                <div class="checkout">
+
+                    <div class="line-5">
+                        <hr>
+                    </div>
+                    <div class="total-amount">
+                        <div class="subtotal">TOTAL</div>
+                        <div class="amount">Rp. {{cart.totalPrice}}</div>
+                    </div>
+                    <div class="total">
+                        <button class="btn-checkout">Checkout</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const counter = document.getElementById("counter");
+        let counterValue = counter.value;
+
+        function handleCounterPlus() {
+            counter.value = ++counterValue;
+        }
+
+        function handleCounterMin() {
+            counter.value = --counterValue;
+        }
+
+        const counterr = document.getElementById("counterr");
+        let counterValuee = counter.value;
+
+        function handleCounterPluss() {
+            counterr.value = ++counterValuee;
+        }
+
+        function handleCounterMinn() {
+            counterr.value = --counterValuee;
+        }
+
+        function courierOption() {
+            var x = document.getElementById("courierr").value;
+            document.getElementById("amountt").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>

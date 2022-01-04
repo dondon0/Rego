@@ -1,0 +1,420 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Montserrat";
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 10%;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+header li,
+header a,
+header button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #465254;
+  text-decoration: none;
+}
+
+header .search {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+header .logo {
+  cursor: pointer;
+  margin-right: auto;
+  width: 91px;
+  height: 26px;
+  margin-left: 40px;
+}
+
+header .nav_links {
+  list-style: none;
+}
+
+header .nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+header .nav_links li a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .nav_links li a:hover {
+  font-weight: 700;
+}
+
+header .profile {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #E7E6E6;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+header .profile:hover {
+  background-color: #2E5D62;
+  color: white;
+}
+
+header button:hover {
+  background-color: #E7E6E6;
+  color: #465254;
+}
+
+header .cart {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background-color: #2E5D62;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sec-wrapper {
+  width: 70%;
+}
+
+.sec-wrapper .line {
+  width: 160px;
+  height: 1px;
+  background-color: black;
+}
+
+.sec-wrapper .line-2 {
+  margin-top: .25em;
+  width: 72px;
+  height: 1px;
+  background-color: black;
+}
+
+.sec-wrapper .box-cart {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #e1f5f5;
+  padding: 40px;
+  border-radius: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-shadow: 1px 0px 18px 1px rgba(46, 93, 98, 0.75);
+  -webkit-box-shadow: 1px 0px 18px 1px rgba(46, 93, 98, 0.75);
+  -moz-box-shadow: 1px 0px 18px 1px rgba(46, 93, 98, 0.75);
+}
+
+.sec-wrapper .box-cart .column-cart {
+  list-style: none;
+}
+
+.sec-wrapper .box-cart .column-cart .item-product {
+  margin-right: 25em;
+}
+
+.sec-wrapper .box-cart .column-cart .item-quantity {
+  margin-right: 10em;
+}
+
+.sec-wrapper .box-cart .column-cart .item-stock {
+  margin-right: 10em;
+}
+
+.sec-wrapper .box-cart .column-cart .item-subtotal {
+  margin-right: 10em;
+}
+
+.sec-wrapper .box-cart .column-cart li {
+  display: inline-block;
+  margin: 0px 20px;
+}
+
+.sec-wrapper .box-cart .line-3 {
+  margin-top: 10px;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: black;
+}
+
+.sec-wrapper .box-cart .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.sec-wrapper .box-cart .list .product-list {
+  margin-right: 8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.sec-wrapper .box-cart .list .product-list .img-cart {
+  background-color: #fff;
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+}
+
+.sec-wrapper .box-cart .list .product-list .product-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sec-wrapper .box-cart .list .product-list .product-detail a {
+  text-decoration: none;
+  color: black;
+}
+
+.sec-wrapper .box-cart .list .product-list .product-detail p {
+  font-size: small;
+  color: #465254;
+}
+
+.sec-wrapper .box-cart .list .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 9em;
+}
+
+.sec-wrapper .box-cart .list .btn {
+  width: 30px;
+  height: 30px;
+  background-color: #2E5D62;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec-wrapper .box-cart .list .counter {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-align: center;
+  width: 30px;
+  font-family: "Montserrat";
+  font-size: 20px;
+}
+
+.sec-wrapper .box-cart .list .stock-product {
+  margin-top: 5em;
+  margin-right: 8em;
+}
+
+.sec-wrapper .box-cart .list .product-price {
+  margin-top: 5em;
+}
+
+.sec-wrapper .box-cart .line-4 {
+  margin-top: 10px;
+  width: 100%;
+  height: 2px;
+  border-radius: 1.5px;
+  background-color: black;
+}
+
+.sec-wrapper .box-cart .checkout {
+  margin-top: 10px;
+  margin-right: 5%;
+}
+
+.sec-wrapper .box-cart .checkout .total {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sec-wrapper .box-cart .checkout .total-amount {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.sec-wrapper .box-cart .checkout .total-amount .amount {
+  margin-left: 8.5em;
+}
+
+.sec-wrapper .box-cart .checkout .subtotal {
+  font-weight: 800;
+  color: #202020;
+  margin-bottom: 20px;
+}
+
+.sec-wrapper .box-cart .checkout .amount {
+  color: #202020;
+  margin-left: 6em;
+  margin-bottom: 20px;
+}
+
+.sec-wrapper .box-cart .checkout .line-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.sec-wrapper .box-cart .checkout hr {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 30%;
+}
+
+.sec-wrapper .box-cart .checkout .btn-checkout {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #E7E6E6;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.sec-wrapper .box-cart .checkout .btn-checkout:hover {
+  background-color: #2E5D62;
+  color: #fff;
+}
+
+.sec-wrapper .box-cart .courier-id {
+  margin-top: 10px;
+  margin-right: 5%;
+}
+
+.sec-wrapper .box-cart .courier-id .delivery-id {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.sec-wrapper .box-cart .courier-id .line-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.sec-wrapper .box-cart .courier-id hr {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 40%;
+}
+
+.sec-wrapper .box-cart .courier-id .subtotal {
+  font-weight: 800;
+  color: #202020;
+}
+
+.sec-wrapper .box-cart .courier-id .courier-option {
+  margin-left: 6em;
+  height: 30px;
+  width: 120px;
+  background-color: #fff;
+  border: none;
+  text-align: center;
+}
+
+.sec-wrapper .box-cart .courier-id .amount {
+  color: #202020;
+  margin-left: 6.5em;
+}
+/*# sourceMappingURL=checkout_page.css.map */

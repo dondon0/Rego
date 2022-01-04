@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,800;0,900;1,700&display=swap" rel="stylesheet">
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link href="/invoice.css" rel="stylesheet" type= "text/css">
+    <script type="text/javascript" src="/invoice.js">
+    </script>
+    
+  </head>
+  <body>
+    <header>
+      <img src="/REGO.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Shoes</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <div class="btn-header">
+            <a href="" class="search"><i class="fas fa-search"></i></a>
+            <a href="/sellerprofile" class="cta"><button class="profile">Profile</button></a>
+            <a href=""><button class="cart"><i class="fas fa-shopping-cart"></i></button></a>
+        </div>
+    </header>
+    {{ttoken}}
+    <input type='hidden' id='snap_token' value="{{ttoken}}"/>
+    <div class="container">
+      <div class="smaller">
+        <div class="small-container invoice-page">
+        <table>
+
+        <h2>INVOICE</h2>
+        {{#each cart.products}}
+
+        <tr class="line">
+          <td class="bold-text">x1</td>
+          <td>{{productname}}</td>
+          <td>Rp {{subtotal}}</td>
+        </tr>
+        {{/each}}
+        {{#each cart.products}}
+        <tr class="line">
+          <td></td>
+          <td>Delivery with{{courier}}</td>
+          <td>Rp {{defdeliveryprice}}</td>
+        </tr>
+        {{/each}}
+
+        
+        <tr class="line">
+          <td></td>
+          <td class="bold-text">TOTAL</td>
+          <td>Rp {{cart.totalPrice}}</td>
+        </tr>
+        
+      </table>
+      </div>
+      <div class="center">
+        <button type="submit" id='pay' onclick="popup(snap_token.value)" class="checkout-button">PAY</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+  </body>
+</html>

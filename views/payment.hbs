@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       {{!-- var created = 0;
+
+        function displayAccordingly() {
+
+            if (created == 1) {
+                removeDrop();
+            }
+
+            //Call mainMenu the main dropdown menu
+            var province = document.getElementById('province');
+
+            //Create the new dropdown menu
+            var whereToPut = document.getElementById('myDiv');
+            var newDropdown = document.createElement('select');
+            newDropdown.setAttribute('id',"newDropdownMenu");
+            whereToPut.appendChild(newDropdown);
+
+            if (province.value == "D.I.Yogyakarta") { //The person chose fruit
+
+                //Add an option called "Apple"
+                var optionApple=document.createElement("option");
+                optionApple.text="Yogyakarta";
+                newDropdown.add(optionApple,newDropdown.options[null]);
+
+                //Add an option called "Banana"
+                var optionBanana=document.createElement("option");
+                optionBanana.text="Bantul";
+                newDropdown.add(optionBanana,newDropdown.options[null]);
+
+            } if (province.value == "Central Java") { //The person chose vegetabes
+
+                //Add an option called "Spinach"
+                var optionSpinach=document.createElement("option");
+                optionSpinach.text="Solo";
+                newDropdown.add(optionSpinach,newDropdown.options[null]);
+
+                //Add an option called "Zucchini"
+                var optionZucchini=document.createElement("option");
+                optionZucchini.text="Semarang";
+                newDropdown.add(optionZucchini,newDropdown.options[null]);
+
+            } if (province.value == "Western Java") { //The person chose vegetabes
+
+                //Add an option called "Spinach"
+                var optionSpinach=document.createElement("option");
+                optionSpinach.text="Bandung";
+                newDropdown.add(optionSpinach,newDropdown.options[null]);
+
+                //Add an option called "Zucchini"
+                var optionZucchini=document.createElement("option");
+                optionZucchini.text="Bekasi";
+                newDropdown.add(optionZucchini,newDropdown.options[null]);
+
+            } if (province.value == "DKI Jakarta") { //The person chose vegetabes
+
+                //Add an option called "Spinach"
+                var optionSpinach=document.createElement("option");
+                optionSpinach.text="Jakarta";
+                newDropdown.add(optionSpinach,newDropdown.options[null]);
+
+            } else if (province.value == "Eastern Java") { //The person chose vegetabes
+
+                //Add an option called "Spinach"
+                var optionSpinach=document.createElement("option");
+                optionSpinach.text="Surabaya";
+                newDropdown.add(optionSpinach,newDropdown.options[null]);
+
+                //Add an option called "Zucchini"
+                var optionZucchini=document.createElement("option");
+                optionZucchini.text="Malang";
+                newDropdown.add(optionZucchini,newDropdown.options[null]);
+
+            }
+
+            created = 1
+
+        }
+
+        function removeDrop() {
+            var d = document.getElementById('myDiv');
+
+            var oldmenu = document.getElementById('newDropdownMenu');
+
+            d.removeChild(oldmenu);
+        } --}}
+    </script>
+</head>
+<body>
+{{#each cart}}
+{{/each}}
+
+    
+</body>
+</html>
